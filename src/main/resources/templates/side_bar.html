@@ -9,17 +9,14 @@
       <a href="#">チャットを作成する</a>
     </div>
   </div>
+  
   <div class="rooms">
-    <div class="room">
+    <div th:each="room : ${rooms}"  class="room">
       <div class="room-name">
-        <a href="#">chatroom1</a>
-      </div>
-    </div>
-    <div class="room">
-      <div class="room-name">
-        <a href="#">chatroom2</a>
+        <a href="#" th:text="${room.name}">techroom</a>
       </div>
     </div>
   </div>
 </div>
-</html>
+</html> 
+ 
