@@ -12,8 +12,8 @@ import in.tech_camp.chat_app.custom_user.CustomUserDetail;
 import in.tech_camp.chat_app.entity.RoomEntity;
 import in.tech_camp.chat_app.entity.RoomUserEntity;
 import in.tech_camp.chat_app.entity.UserEntity;
-import in.tech_camp.chat_app.repository.UserRepository;
 import in.tech_camp.chat_app.repository.RoomUserRepository;
+import in.tech_camp.chat_app.repository.UserRepository;
 import lombok.AllArgsConstructor;
 
 @Controller
@@ -23,7 +23,7 @@ public class MessageController {
 
   private final RoomUserRepository roomUserRepository;
 
-  @GetMapping("/")
+  @GetMapping("/message")
   public String showMessages(@AuthenticationPrincipal CustomUserDetail currentUser, Model model){
     UserEntity user = userRepository.findById(currentUser.getId());
     model.addAttribute("user", user);
