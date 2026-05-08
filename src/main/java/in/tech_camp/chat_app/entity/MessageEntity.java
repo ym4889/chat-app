@@ -12,4 +12,5 @@ public class MessageEntity {
   private Timestamp createdAt;
   private UserEntity user;
   private RoomEntity room;
+  
 }
