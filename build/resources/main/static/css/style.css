@@ -80,13 +80,21 @@
 .header-button{
   margin-top: 40px;
 }
-
-.header-button a {
+.header-button input[type="submit"] {
+  text-decoration: none;
+  border: 1px solid darkred;
+  color: darkred;
+  background-color: #fff;
+  padding: 20px;
+  cursor: pointer;
+}
+/*  チャット終了実装に伴い削除 
+　.header-button a {
   text-decoration: none;
   border: 1px solid darkred;
   color: darkred;
   padding: 20px;
-}
+} */
 
 /* メッセージ一覧表示 */
 .messages{

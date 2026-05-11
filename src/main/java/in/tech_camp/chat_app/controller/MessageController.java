@@ -3,6 +3,7 @@ package in.tech_camp.chat_app.controller;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.hibernate.validator.internal.engine.groups.ValidationOrder;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -62,7 +63,7 @@ public class MessageController {
 
   @PostMapping("/rooms/{roomId}/messages")
   public String saveMessage(@PathVariable("roomId") Integer roomId, @ModelAttribute("messageForm") @Validated(ValidationOrder.class) MessageForm messageForm, BindingResult bindingResult, @AuthenticationPrincipal CustomUserDetail currentUser) {
-     if (bindingResult.hasErrors()) {
+    if (bindingResult.hasErrors()) {
       return "redirect:/rooms/" + roomId + "/messages";
     }
     
