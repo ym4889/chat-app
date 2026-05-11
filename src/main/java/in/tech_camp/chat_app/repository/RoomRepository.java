@@ -20,4 +20,4 @@ public interface RoomRepository {
   @Delete("DELETE FROM rooms WHERE id = #{id}")
   void deleteById(Integer id);
 } 
- 
+
