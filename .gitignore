@@ -31,7 +31,7 @@ replay_pid*
 /.nb-gradle/
 
 ### VS Code ###
-.vscode/
+.vscode/ 
 
 
 src/main/resources/static/uploads/**
